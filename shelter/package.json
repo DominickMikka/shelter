@@ -1,0 +1,12 @@
+{
+  "name": "shelter",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch assets/style.scss:assets/style.css"
+  },
+  "dependencies": {
+    "sass": "^1.49.10",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.70.0"
+  }
+}
