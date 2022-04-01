@@ -1,1 +1,74 @@
+@font-face {
+  font-family: Georgia;
+  font-weight: 400;
+  font-style: normal;
+  src: local(Georgia), url(./fonts/georgia/georgia-regular.ttf);
+}
+@font-face {
+  font-family: Georgia;
+  font-weight: 400;
+  font-style: italic;
+  src: local(Georgia), url(./fonts/georgia/georgia-italic.ttf);
+}
+@font-face {
+  font-family: Arial;
+  font-weight: 400;
+  font-style: normal;
+  src: local(Arial), url(./fonts/arial/arial-regular.ttf);
+}
+* {
+  font-family: Georgia;
+  font-weight: 400;
+}
 
+header {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+header nav {
+  display: flex;
+  column-gap: 35px;
+  margin: 19px 42px 0 0;
+}
+header nav a {
+  height: 21px;
+  color: #CDCDCD;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+}
+header nav a.current {
+  color: #FAFAFA;
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 40px;
+}
+.logo a {
+  color: #F1CDB3;
+  text-decoration: none;
+  font-size: 32px;
+  letter-spacing: 2px;
+  padding-bottom: 9px;
+}
+.logo span {
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  padding: 0 0 0 5px;
+  letter-spacing: 0.1em;
+}
+
+.container {
+  background: url(./images/start-screen-background.jpg) no-repeat, url(./images/start-screen-gradient-background.png) no-repeat;
+  background-position: top center;
+  padding-top: 60px;
+  min-height: 700px;
+}
+
+/*# sourceMappingURL=style.css.map */
