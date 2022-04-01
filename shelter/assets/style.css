@@ -24,13 +24,11 @@
 header {
   width: 1280px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 }
 header nav {
   display: flex;
-  column-gap: 35px;
-  margin: 19px 42px 0 0;
+  column-gap: 36px;
+  margin: 19px 0 0 0;
 }
 header nav a {
   height: 21px;
@@ -43,20 +41,18 @@ header nav a.current {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
 }
-
-.logo {
+header .logo {
   display: flex;
   flex-direction: column;
-  margin: 0 0 0 40px;
 }
-.logo a {
+header .logo a {
   color: #F1CDB3;
   text-decoration: none;
   font-size: 32px;
   letter-spacing: 2px;
   padding-bottom: 9px;
 }
-.logo span {
+header .logo span {
   color: #FFFFFF;
   font-family: Arial, sans-serif;
   font-size: 13px;
@@ -65,10 +61,62 @@ header nav a.current {
 }
 
 .container {
-  background: url(./images/start-screen-background.jpg) no-repeat, url(./images/start-screen-gradient-background.png) no-repeat;
-  background-position: top center;
+  /*background: url(./images/start-screen-gradient-background.png) no-repeat;      
+  background-position: top center;*/
+  width: 1280px;
+  margin: 0 auto;
+  background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   padding-top: 60px;
-  min-height: 700px;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.not-only {
+  width: 1280px;
+  margin: 0 auto;
+  background: url(./images/start-screen-puppy.png) no-repeat 542px 59px;
+  min-height: 787px;
+}
+.not-only .need-house {
+  width: 460px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 42px;
+  padding: 223px 0 0 0;
+}
+.not-only h1 {
+  width: 310px;
+  margin: 0;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+}
+.not-only p {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  color: #CDCDCD;
+  line-height: 160%;
+  margin: 0;
+}
+.not-only .make-friend {
+  font-size: 17px;
+  background: #F1CDB3;
+  border-radius: 100px;
+  padding: 15px 30px;
+  text-align: center;
+  width: 207px;
+  height: 52px;
+  border: 0;
+  letter-spacing: 0.06em;
+}
+.not-only .make-friend:hover {
+  background: #FDDCC4;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
