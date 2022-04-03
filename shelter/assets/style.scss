@@ -81,11 +81,7 @@ header {
 }
 
 .container {
-  /*background: url(./images/start-screen-gradient-background.png) no-repeat;      
-  background-position: top center;*/
-  @include align-center;
   background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-
   padding-top: 60px;
 }
 
@@ -140,5 +136,34 @@ header {
   .make-friend:hover {
     background: #FDDCC4;
     cursor: pointer;
+  }
+}
+
+.about {
+  background: #FFFFFF;
+
+  .wrapper {
+    justify-content: flex-end;
+    background: url(./images/about-pets.png) no-repeat 175px 80px;
+  }
+
+  .text-block {
+    max-width: 421px;
+    margin: 66px 184px 0 0;
+    color: #4C4C4C;
+
+    h2 {
+      margin: 29px 10px 23px 0;
+      font-size: 35px;
+      letter-spacing: 0.06em;
+      line-height: 130%;
+    }
+
+    p {
+      margin-bottom: 25px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 160%;
+    }
   }
 }
