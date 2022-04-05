@@ -231,6 +231,7 @@ header .logo span {
 }
 
 .help {
+  padding-bottom: 45px;
   background: #FFFFFF;
 }
 .help h2 {
@@ -280,6 +281,53 @@ header .logo span {
 }
 .help .wrapper {
   display: block;
+}
+
+.in-addition {
+  background: #F6F6F6;
+  min-height: 500px;
+}
+.in-addition .wrapper {
+  justify-content: flex-end;
+  min-height: 500px;
+  background: url(./images/donation-dog.png) no-repeat 143px 91px;
+}
+.in-addition .text-block {
+  display: flex;
+  min-width: 420px;
+  margin: 52px 101px 0 0;
+  color: #545454;
+  flex-direction: column;
+}
+.in-addition .text-block h2 {
+  margin: 29px 0px 3px 0;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+}
+.in-addition .text-block p {
+  margin-bottom: 19px;
+  font-size: 15px;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+.in-addition .text-block .credit-card {
+  width: 318px;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  text-indent: 43px;
+  background: url(./images/credit-card.svg) #F1CDB3 no-repeat 14px 10px;
+  border-radius: 9px;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+.in-addition .text-block .description {
+  max-width: 360px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B2B2B2;
 }
 
 /*# sourceMappingURL=style.css.map */
