@@ -230,4 +230,56 @@ header .logo span {
   left: 18px;
 }
 
+.help {
+  background: #FFFFFF;
+}
+.help h2 {
+  font-size: 35px;
+  text-align: center;
+  padding: 81px 0 0 0;
+  color: #545454;
+  max-width: 400px;
+  margin: 0 auto 58px;
+  letter-spacing: 0.06em;
+  line-height: 130%;
+}
+.help .help-items {
+  display: flex;
+  gap: 120px;
+  margin: 0 85px 55px;
+  align-items: center;
+}
+.help .help-items .help-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.help .help-items .help-item span {
+  font-size: 20px;
+  color: #545454;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.help .help-items-2 {
+  display: flex;
+  gap: 121px;
+  margin: 0 168px 55px;
+}
+.help .help-items-2 .help-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.help .help-items-2 .help-item span {
+  font-size: 20px;
+  color: #545454;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+.help .wrapper {
+  display: block;
+}
+
 /*# sourceMappingURL=style.css.map */
