@@ -125,17 +125,17 @@ header {
     font-size: 17px;
     background: #F1CDB3;
     border-radius: 100px;
-    padding: 15px 30px;
     text-align: center;
     width: 207px;
     height: 52px;
-    border: 0;
     letter-spacing: 0.06em;
+    text-decoration: none;
+    color: #292929;
+    line-height: 50px;
   }
 
   .make-friend:hover {
     background: #FDDCC4;
-    cursor: pointer;
   }
 }
 
@@ -202,6 +202,12 @@ header {
       background: url(./images/arrow-left.png) no-repeat center center;
     }
 
+    .slide-left:hover, .slide-right:hover {
+      background-color: #FDDCC4;
+      border-color: #FDDCC4;
+      cursor: pointer;
+    }
+
     .slide-right {
       width: 52px;
       height: 52px;
@@ -237,7 +243,18 @@ header {
         letter-spacing: 0.06em;
         color: #292929;
         background: transparent;
+        cursor: pointer;
       }
+    }
+
+    .pet:hover {
+      background: #FFFFFF;
+      cursor: pointer;
+    }
+
+    .pet:hover > button {
+      background: #FDDCC4;
+      border-color: #FDDCC4;
     }
 
   }
@@ -256,7 +273,10 @@ header {
     text-decoration: none;
     margin: 0 auto;
   }
-
+  .get-rest:hover {
+    background: #FDDCC4;
+  }
+  
 }
 
 .pet:nth-child(2) {
@@ -307,8 +327,8 @@ header {
 
   .help-items-2 {
     display: flex;
-    gap: 121px;
-    margin: 0 168px 55px;
+    gap: 119px;
+    margin: 0 171px 55px;
 
     .help-item {
       display: flex;
@@ -365,11 +385,17 @@ header {
       width: 318px;
       margin-bottom: 20px;
       padding: 10px 15px;
-      text-indent: 43px;
+      
       background: url(./images/credit-card.svg) #F1CDB3 no-repeat 14px 10px;
       border-radius: 9px;
-      font-size: 20px;
-      letter-spacing: 0.06em;
+
+      a {
+        text-decoration: none;
+        color: #545454;
+        letter-spacing: 0.06em;
+        font-size: 20px;
+        padding-left: 43px;
+      }
     }
 
     .description {
@@ -414,7 +440,9 @@ footer {
       color: #F1CDB3;
       text-indent: 61px;
       min-height: 30px;
-      padding: 8px 0 34px 0;
+      margin: 0px 0 34px 0;
+      padding-top: 8px;
+      text-decoration: none;
     }
 
     .phone {
@@ -425,6 +453,7 @@ footer {
       text-indent: 61px;
       min-height: 30px;
       padding-top: 8px;
+      text-decoration: none;
     }
   }
 
@@ -442,18 +471,22 @@ footer {
       color: #FFFFFF;
     }
 
-    .address {
+    a {
       background: url(./images/icon-marker.png) no-repeat 0px 5px;
       font-size: 20px;
       letter-spacing: 0.06em;
       color: #F1CDB3;
       min-height: 30px;
-      padding: 0 0 29px 40px;
       line-height: 115%;
+      text-decoration: none;
     }
 
-    .address2 {
-      padding-top: 9px;
+    .address-1 {
+      padding: 0 0 29px 40px;
+    }
+
+    .address-2 {
+      padding: 8px 0 29px 40px;
     }
   }
 
