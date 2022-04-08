@@ -35,8 +35,13 @@ $base-font-weight: 400;
   font-weight: $base-font-weight;
 }
 
+body {
+  background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
 header {
   @include align-center;
+  padding: 60px 0 0 0;
   
   nav {
     display: flex;
@@ -84,7 +89,7 @@ header {
 }
 
 .container {
-  background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  
   padding-top: 60px;
 }
 

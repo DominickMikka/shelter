@@ -21,6 +21,10 @@
   font-weight: 400;
 }
 
+body {
+  background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+}
+
 .wrapper {
   width: 1200px;
   margin: 0 auto;
@@ -53,12 +57,12 @@ header nav a.current {
 header nav a:hover {
   color: #292929;
 }
-header h1 {
-  margin: 0 0 9px 0;
-}
 header .logo {
   display: flex;
   flex-direction: column;
+}
+header .logo h1 {
+  margin: 0 0 9px 0;
 }
 header .logo a {
   color: #545454;
@@ -94,18 +98,17 @@ header .logo span {
 }
 .our-friends .pets {
   display: flex;
-  align-items: center;
-  column-gap: 40px;
-  row-gap: 30px;
   flex-wrap: wrap;
+  align-items: center;
+  gap: 30px 40px;
   margin: 0 0 61px 0;
 }
 .our-friends .pets .pet {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 270px;
   height: 435px;
-  flex-direction: column;
   background: #FAFAFA;
   border-radius: 9px;
 }
@@ -138,8 +141,8 @@ header .logo span {
 }
 .our-friends .pagination {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
 }
 .our-friends .pagination .first-page, .our-friends .pagination .previous-page {
   width: 52px;
@@ -163,17 +166,13 @@ header .logo span {
   width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
-  box-sizing: border-box;
   border-radius: 100px;
   font-size: 20px;
   color: #292929;
   background: transparent;
+  cursor: pointer;
 }
 
-footer {
-  min-height: 350px;
-  background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
-}
 footer .wrapper {
   justify-content: flex-start;
   gap: 160px;
@@ -182,9 +181,9 @@ footer .wrapper {
 }
 footer .contacts {
   display: flex;
-  padding-top: 22px;
   flex-direction: column;
   max-width: 280px;
+  padding-top: 22px;
 }
 footer .contacts h3 {
   font-size: 35px;
@@ -215,9 +214,9 @@ footer .contacts .phone {
 }
 footer .addresses {
   display: flex;
-  padding-top: 22px;
   flex-direction: column;
   max-width: 300px;
+  padding-top: 22px;
 }
 footer .addresses h3 {
   margin-bottom: 32px;
