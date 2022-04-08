@@ -2,7 +2,8 @@
   "name": "shelter",
   "main": "index.js",
   "scripts": {
-    "scss": "sass --watch assets/style.scss:assets/style.css"
+    "scss": "sass --watch assets/style.scss:assets/style.css",
+    "scss-pets": "sass --watch assets/style-pets.scss:assets/style-pets.css"
   },
   "dependencies": {
     "sass": "^1.49.10",

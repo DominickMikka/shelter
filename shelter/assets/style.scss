@@ -49,13 +49,16 @@ header {
       font-size: 15px;
       font-family: Arial, sans-serif;
       text-decoration: none;
-    }
 
-    a.current {
-      color: #FAFAFA;
-      border-bottom: 3px solid #F1CDB3;
+      &.current {
+        color: #FAFAFA;
+        border-bottom: 3px solid #F1CDB3;
+      }
     }
+  }
 
+  h1 {
+    margin: 0 0 9px 0;
   }
 
   .logo {
@@ -105,7 +108,7 @@ header {
     padding: 223px 0 0 0;
   }
 
-  h1 {
+  h2 {
     width: 310px;
     margin: 0;
     font-size: 44px;
@@ -306,29 +309,11 @@ header {
 
   .help-items {
     display: flex;
-    gap: 120px;
+    gap: 55px 120px;
     margin: 0 85px 55px;
     align-items: center;
-
-    .help-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-
-      span {
-        font-size: 20px;
-        color: #545454;
-        text-align: center;
-        letter-spacing: 0.06em;
-      }
-    }
-  }
-
-  .help-items-2 {
-    display: flex;
-    gap: 119px;
-    margin: 0 171px 55px;
+    justify-content: center;
+    flex-wrap: wrap;
 
     .help-item {
       display: flex;

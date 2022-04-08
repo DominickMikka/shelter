@@ -41,6 +41,9 @@ header nav a.current {
   color: #FAFAFA;
   border-bottom: 3px solid #F1CDB3;
 }
+header h1 {
+  margin: 0 0 9px 0;
+}
 header .logo {
   display: flex;
   flex-direction: column;
@@ -85,7 +88,7 @@ header .logo span {
   row-gap: 42px;
   padding: 223px 0 0 0;
 }
-.not-only h1 {
+.not-only h2 {
   width: 310px;
   margin: 0;
   font-size: 44px;
@@ -263,9 +266,11 @@ header .logo span {
 }
 .help .help-items {
   display: flex;
-  gap: 120px;
+  gap: 55px 120px;
   margin: 0 85px 55px;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .help .help-items .help-item {
   display: flex;
@@ -274,23 +279,6 @@ header .logo span {
   gap: 30px;
 }
 .help .help-items .help-item span {
-  font-size: 20px;
-  color: #545454;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
-.help .help-items-2 {
-  display: flex;
-  gap: 119px;
-  margin: 0 171px 55px;
-}
-.help .help-items-2 .help-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-.help .help-items-2 .help-item span {
   font-size: 20px;
   color: #545454;
   text-align: center;
