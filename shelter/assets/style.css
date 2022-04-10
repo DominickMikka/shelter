@@ -178,17 +178,17 @@ header .logo span {
   border-radius: 100px;
   background: url(./images/arrow-left.png) no-repeat center center;
 }
-.our-friends .pets .slide-left:hover, .our-friends .pets .slide-right:hover {
-  background-color: #FDDCC4;
-  border-color: #FDDCC4;
-  cursor: pointer;
-}
 .our-friends .pets .slide-right {
   width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: url(./images/arrow-right.png) no-repeat center center;
+}
+.our-friends .pets .slide-left:hover, .our-friends .pets .slide-right:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+  cursor: pointer;
 }
 .our-friends .pets .pet {
   display: flex;
@@ -226,6 +226,14 @@ header .logo span {
   background: #FDDCC4;
   border-color: #FDDCC4;
 }
+.our-friends .pets .pet:nth-child(2) {
+  position: relative;
+  right: 18px;
+}
+.our-friends .pets .pet:nth-child(4) {
+  position: relative;
+  left: 18px;
+}
 .our-friends .get-rest {
   display: flex;
   flex-direction: column;
@@ -242,16 +250,6 @@ header .logo span {
 }
 .our-friends .get-rest:hover {
   background: #FDDCC4;
-}
-
-.pet:nth-child(2) {
-  position: relative;
-  right: 18px;
-}
-
-.pet:nth-child(4) {
-  position: relative;
-  left: 18px;
 }
 
 .help {

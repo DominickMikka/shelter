@@ -200,6 +200,11 @@ header {
       color: #292929;
       background: transparent;
       cursor: pointer;
+
+      &:hover {
+        background-color: #FDDCC4;
+        border-color: #FDDCC4;
+      }
     }
   }
 }

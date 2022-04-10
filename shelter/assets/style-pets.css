@@ -172,6 +172,10 @@ header .logo span {
   background: transparent;
   cursor: pointer;
 }
+.our-friends .pagination .next-page:hover, .our-friends .pagination .last-page:hover {
+  background-color: #FDDCC4;
+  border-color: #FDDCC4;
+}
 
 footer .wrapper {
   justify-content: flex-start;

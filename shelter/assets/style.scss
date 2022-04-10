@@ -27,12 +27,9 @@
   margin: 0 auto;
 }
 
-$base-font-family: Georgia;
-$base-font-weight: 400;
-
 * {
-  font-family: $base-font-family;
-  font-weight: $base-font-weight;
+  font-family: Georgia;
+  font-weight: 400;
 }
 
 body {
@@ -140,10 +137,10 @@ header {
     text-decoration: none;
     color: #292929;
     line-height: 50px;
-  }
 
-  .make-friend:hover {
-    background: #FDDCC4;
+    &:hover {
+      background: #FDDCC4;
+    }
   }
 }
 
@@ -210,18 +207,18 @@ header {
       background: url(./images/arrow-left.png) no-repeat center center;
     }
 
-    .slide-left:hover, .slide-right:hover {
-      background-color: #FDDCC4;
-      border-color: #FDDCC4;
-      cursor: pointer;
-    }
-
     .slide-right {
       width: 52px;
       height: 52px;
       border: 2px solid #F1CDB3;
       border-radius: 100px;
       background: url(./images/arrow-right.png) no-repeat center center;
+    }
+
+    .slide-left:hover, .slide-right:hover {
+      background-color: #FDDCC4;
+      border-color: #FDDCC4;
+      cursor: pointer;
     }
 
     .pet {
@@ -253,18 +250,28 @@ header {
         background: transparent;
         cursor: pointer;
       }
-    }
 
-    .pet:hover {
-      background: #FFFFFF;
-      cursor: pointer;
-    }
+      &:hover {
+        background: #FFFFFF;
+        cursor: pointer;
+      }
+  
+      &:hover > button {
+        background: #FDDCC4;
+        border-color: #FDDCC4;
+      }
 
-    .pet:hover > button {
-      background: #FDDCC4;
-      border-color: #FDDCC4;
-    }
+      &:nth-child(2) {
+        position: relative;
+        right: 18px;
+      }
+      
+      &:nth-child(4) {
+        position: relative;
+        left: 18px;
+      }
 
+    }
   }
 
   .get-rest {
@@ -280,21 +287,11 @@ header {
     color: #292929;
     text-decoration: none;
     margin: 0 auto;
-  }
-  .get-rest:hover {
-    background: #FDDCC4;
-  }
-  
-}
 
-.pet:nth-child(2) {
-  position: relative;
-  right: 18px;
-}
-
-.pet:nth-child(4) {
-  position: relative;
-  left: 18px;
+    &:hover {
+      background: #FDDCC4;
+    }
+  }
 }
 
 .help {
