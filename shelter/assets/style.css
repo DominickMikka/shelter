@@ -26,7 +26,7 @@ body {
 }
 
 header {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 60px 0 0 0;
 }
@@ -73,14 +73,14 @@ header .logo span {
 }
 
 .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 
 .not-only {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   background: url(./images/start-screen-puppy.png) no-repeat 542px 59px;
   min-height: 787px;
@@ -409,6 +409,82 @@ footer .addresses .address-1 {
 }
 footer .addresses .address-2 {
   padding: 8px 0 29px 40px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 30px 0 0 0;
+  }
+
+  .wrapper {
+    max-width: 708px;
+  }
+
+  .not-only {
+    min-height: 1074px;
+    background: url(./images/768/start-screen-puppy.png) no-repeat 169px 481px;
+  }
+  .not-only .need-house {
+    margin: 0 auto;
+    padding: 60px 0 0 0;
+  }
+  .not-only .make-friend {
+    margin: 0 auto;
+  }
+
+  .about {
+    min-height: 959px;
+  }
+  .about .wrapper {
+    min-height: 959px;
+    background: url(./images/about-pets.png) no-repeat 204px 540px;
+  }
+  .about .text-block {
+    margin: 52px 148px 0 0;
+  }
+
+  .our-friends .pets {
+    column-gap: 22px;
+  }
+  .our-friends .pets .pet:nth-child(2) {
+    right: 9px;
+  }
+  .our-friends .pets .pet:nth-child(3) {
+    position: relative;
+    right: -10px;
+  }
+  .our-friends .pets .pet:nth-child(4) {
+    display: none;
+  }
+
+  .help .help-items {
+    gap: 55px 60px;
+    margin: 0 0px 55px;
+  }
+  .help .help-items .help-item {
+    width: 170px;
+  }
+
+  .in-addition .wrapper {
+    min-height: 683px;
+    background: url(./images/donation-dog.png) no-repeat 101px bottom;
+  }
+  .in-addition .text-block {
+    margin: 52px 124px 0 0;
+  }
+
+  footer .wrapper {
+    gap: 59px;
+    justify-content: center;
+    min-height: 639px;
+    background: url(./images/footer-puppy.png) no-repeat center bottom;
+  }
+  footer .contacts h3 {
+    margin-top: 8px;
+  }
+  footer .addresses h3 {
+    margin-top: 8px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
