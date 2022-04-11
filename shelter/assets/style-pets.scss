@@ -1,26 +1,4 @@
-@font-face {
-  font-family: Georgia;
-  font-weight: 400;
-  font-style: normal;
-  src: local(Georgia),
-       url(./fonts/georgia/georgia-regular.ttf);
-}
-
-@font-face {
-  font-family: Georgia;
-  font-weight: 400;
-  font-style: italic;
-  src: local(Georgia),
-       url(./fonts/georgia/georgia-italic.ttf);
-}
-
-@font-face {
-  font-family: Arial;
-  font-weight: 400;
-  font-style: normal;
-  src: local(Arial),
-       url(./fonts/arial/arial-regular.ttf);
-}
+@import "fonts.css";
 
 @mixin align-center {
   width: 1280px;
@@ -157,6 +135,7 @@ header {
       &:hover {
         background: #FFFFFF;
         cursor: pointer;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
       }
 
       &:hover > button {
@@ -210,12 +189,6 @@ header {
 }
 
 footer {
-  .wrapper {
-    justify-content: flex-start;
-    gap: 160px;
-    min-height: 350px;
-    background: url(./images/footer-puppy.png) no-repeat right 40px;
-  }
 
   .contacts {
     display: flex;
@@ -284,6 +257,14 @@ footer {
 
     .address-2 {
       padding: 8px 0 29px 40px;
+    }
+  }
+
+  .footer-puppy {
+    padding: 40px 0 0 0;
+
+    img {
+      display: block;
     }
   }
 }

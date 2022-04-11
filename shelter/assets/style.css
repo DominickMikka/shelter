@@ -1,21 +1,4 @@
-@font-face {
-  font-family: Georgia;
-  font-weight: 400;
-  font-style: normal;
-  src: local(Georgia), url(./fonts/georgia/georgia-regular.ttf);
-}
-@font-face {
-  font-family: Georgia;
-  font-weight: 400;
-  font-style: italic;
-  src: local(Georgia), url(./fonts/georgia/georgia-italic.ttf);
-}
-@font-face {
-  font-family: Arial;
-  font-weight: 400;
-  font-style: normal;
-  src: local(Arial), url(./fonts/arial/arial-regular.ttf);
-}
+@import "fonts.css";
 * {
   font-family: Georgia;
   font-weight: 400;
@@ -29,6 +12,13 @@ header {
   max-width: 1280px;
   margin: 0 auto;
   padding: 60px 0 0 0;
+}
+header .mobile-menu {
+  display: none;
+  width: 30px;
+  height: 22px;
+  border: 0;
+  background: url(./images/burger.png) no-repeat;
 }
 header nav {
   display: flex;
@@ -82,8 +72,6 @@ header .logo span {
 .not-only {
   max-width: 1280px;
   margin: 0 auto;
-  background: url(./images/start-screen-puppy.png) no-repeat 542px 59px;
-  min-height: 787px;
 }
 .not-only .need-house {
   width: 460px;
@@ -91,6 +79,12 @@ header .logo span {
   flex-direction: column;
   row-gap: 42px;
   padding: 223px 0 0 0;
+}
+.not-only .dog-need-house {
+  margin: 59px 0 0;
+}
+.not-only .dog-need-house img {
+  display: block;
 }
 .not-only h2 {
   width: 310px;
@@ -126,9 +120,8 @@ header .logo span {
   padding-bottom: 89px;
   background: #FFFFFF;
 }
-.about .wrapper {
-  justify-content: flex-end;
-  background: url(./images/about-pets.png) no-repeat 175px 80px;
+.about .about-pets-image {
+  margin: 80px 0 0 175px;
 }
 .about .text-block {
   max-width: 421px;
@@ -168,7 +161,8 @@ header .logo span {
 .our-friends .pets {
   display: flex;
   align-items: center;
-  column-gap: 72px;
+  gap: 71px;
+  flex-wrap: wrap;
   margin: 0 0 61px 0;
 }
 .our-friends .pets .slide-left {
@@ -177,6 +171,7 @@ header .logo span {
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: url(./images/arrow-left.png) no-repeat center center;
+  order: -1;
 }
 .our-friends .pets .slide-right {
   width: 52px;
@@ -221,18 +216,19 @@ header .logo span {
 .our-friends .pets .pet:hover {
   background: #FFFFFF;
   cursor: pointer;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 .our-friends .pets .pet:hover > button {
   background: #FDDCC4;
   border-color: #FDDCC4;
 }
-.our-friends .pets .pet:nth-child(2) {
+.our-friends .pets .pet:nth-child(1) {
   position: relative;
   right: 18px;
 }
-.our-friends .pets .pet:nth-child(4) {
+.our-friends .pets .pet:nth-child(3) {
   position: relative;
-  left: 18px;
+  left: 20px;
 }
 .our-friends .get-rest {
   display: flex;
@@ -295,13 +291,17 @@ header .logo span {
   padding-bottom: 100px;
 }
 .in-addition .wrapper {
-  justify-content: flex-end;
-  background: url(./images/donation-dog.png) no-repeat 143px 91px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.in-addition .in-addition-dog {
+  margin: 84px 0 0 42px;
 }
 .in-addition .text-block {
   display: flex;
   min-width: 420px;
-  margin: 52px 101px 0 0;
+  margin: 52px 0 0 0;
   color: #545454;
   flex-direction: column;
 }
@@ -340,15 +340,6 @@ header .logo span {
   color: #B2B2B2;
 }
 
-footer {
-  min-height: 350px;
-}
-footer .wrapper {
-  justify-content: flex-start;
-  gap: 160px;
-  min-height: 350px;
-  background: url(./images/footer-puppy.png) no-repeat right 40px;
-}
 footer .contacts {
   display: flex;
   padding-top: 22px;
@@ -409,6 +400,12 @@ footer .addresses .address-1 {
 }
 footer .addresses .address-2 {
   padding: 8px 0 29px 40px;
+}
+footer .footer-puppy {
+  padding: 40px 0 0 0;
+}
+footer .footer-puppy img {
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
@@ -484,6 +481,94 @@ footer .addresses .address-2 {
   }
   footer .addresses h3 {
     margin-top: 8px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wrapper {
+    max-width: 300px;
+  }
+
+  header .wrapper {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+  header nav {
+    display: none;
+  }
+  header .mobile-menu {
+    display: block;
+  }
+
+  .not-only {
+    min-height: 732px;
+    background: url(./images/320/start-screen-puppy.png) no-repeat 50px 460px;
+  }
+  .not-only h2 {
+    width: 210px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 0.06em;
+    font-size: 25px;
+  }
+  .not-only .need-house {
+    width: 100%;
+    padding: 59px 0 0 0;
+  }
+  .not-only p {
+    text-align: center;
+  }
+
+  .about {
+    padding-bottom: 15px;
+  }
+  .about .wrapper {
+    background: url(./images/320/about-pets.png) no-repeat center 578px;
+  }
+  .about .text-block {
+    margin: 0;
+  }
+  .about .text-block h2 {
+    font-size: 25px;
+    text-align: center;
+    max-width: 293px;
+    margin: 42px auto 24px;
+  }
+  .about .text-block p {
+    text-align: justify;
+    width: 276px;
+    margin: 0px auto 22px;
+  }
+
+  .our-friends h2 {
+    margin: 0 auto 40px;
+    padding: 42px 0 0 0;
+    font-size: 25px;
+    text-align: center;
+  }
+  .our-friends .pets {
+    display: block;
+    position: relative;
+    margin: 0 0 117px 0;
+  }
+  .our-friends .pets .pet {
+    margin: 0;
+  }
+  .our-friends .pets .pet:nth-child(2) {
+    right: 0;
+  }
+  .our-friends .pets .pet:nth-child(3) {
+    display: none;
+  }
+  .our-friends .pets .slide-left {
+    position: absolute;
+    bottom: -73px;
+    left: 58px;
+  }
+  .our-friends .pets .slide-right {
+    position: absolute;
+    left: 190px;
+    bottom: -73px;
   }
 }
 
