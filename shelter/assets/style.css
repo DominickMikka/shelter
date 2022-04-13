@@ -417,40 +417,49 @@ footer .footer-puppy img {
     max-width: 708px;
   }
 
-  .not-only {
-    min-height: 1074px;
-    background: url(./images/768/start-screen-puppy.png) no-repeat 169px 481px;
+  .not-only .wrapper {
+    flex-direction: column;
+    gap: 99px;
+    align-items: center;
   }
   .not-only .need-house {
     margin: 0 auto;
     padding: 60px 0 0 0;
   }
+  .not-only .dog-need-house {
+    margin: 0;
+    padding: 0 0 0 138px;
+  }
   .not-only .make-friend {
     margin: 0 auto;
   }
 
-  .about {
-    min-height: 959px;
-  }
   .about .wrapper {
-    min-height: 959px;
-    background: url(./images/about-pets.png) no-repeat 204px 540px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 55px;
+  }
+  .about .about-pets-image {
+    margin: 0;
   }
   .about .text-block {
-    margin: 52px 148px 0 0;
+    margin: 52px 8px 0 0;
   }
 
-  .our-friends .pets {
-    column-gap: 22px;
+  .our-friends h2 {
+    padding-top: 87px;
   }
-  .our-friends .pets .pet:nth-child(2) {
+  .our-friends .pets {
+    gap: 21px;
+  }
+  .our-friends .pets .pet:nth-child(1) {
     right: 9px;
   }
-  .our-friends .pets .pet:nth-child(3) {
+  .our-friends .pets .pet:nth-child(2) {
     position: relative;
-    right: -10px;
+    right: -11px;
   }
-  .our-friends .pets .pet:nth-child(4) {
+  .our-friends .pets .pet:nth-child(3) {
     display: none;
   }
 
@@ -462,25 +471,32 @@ footer .footer-puppy img {
     width: 170px;
   }
 
+  .in-addition {
+    padding-bottom: 96px;
+  }
   .in-addition .wrapper {
-    min-height: 683px;
-    background: url(./images/donation-dog.png) no-repeat 101px bottom;
+    flex-direction: column-reverse;
   }
   .in-addition .text-block {
-    margin: 52px 124px 0 0;
+    margin: 52px 0 30px 40px;
+  }
+  .in-addition .in-addition-dog {
+    margin: 0;
   }
 
   footer .wrapper {
-    gap: 59px;
+    flex-wrap: wrap;
+    gap: 34px 59px;
     justify-content: center;
-    min-height: 639px;
-    background: url(./images/footer-puppy.png) no-repeat center bottom;
   }
   footer .contacts h3 {
     margin-top: 8px;
   }
   footer .addresses h3 {
     margin-top: 8px;
+  }
+  footer .footer-puppy {
+    padding: 0;
   }
 }
 @media screen and (max-width: 320px) {

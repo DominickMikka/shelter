@@ -489,12 +489,21 @@ footer {
   }
 
   .not-only {
-    min-height: 1074px;
-    background: url(./images/768/start-screen-puppy.png) no-repeat 169px 481px;
+
+    .wrapper {
+      flex-direction: column;
+      gap: 99px;
+      align-items: center;
+    }
 
     .need-house {
       margin: 0 auto;
       padding: 60px 0 0 0;
+    }
+
+    .dog-need-house {
+      margin: 0;
+      padding: 0 0 0 138px;
     }
 
     .make-friend {
@@ -503,34 +512,43 @@ footer {
   }
 
   .about {
-    min-height: 959px;
 
     .wrapper {
-      min-height: 959px;
-      background: url(./images/about-pets.png) no-repeat 204px 540px;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about-pets-image {
+      margin: 0;
     }
 
     .text-block {
-      margin: 52px 148px 0 0;
+      margin: 52px 8px 0 0;
     }
     
   }
 
   .our-friends {
+
+    h2 {
+      padding-top: 87px;
+    }
+
     .pets {
-      column-gap: 22px;
+      gap: 21px;
 
       .pet {
-        &:nth-child(2) {
+        &:nth-child(1) {
           right: 9px;
         }
 
-        &:nth-child(3) {
+        &:nth-child(2) {
           position: relative;
-          right: -10px;
+          right: -11px;
         }
 
-        &:nth-child(4) {
+        &:nth-child(3) {
           display: none;
         }
       }
@@ -549,22 +567,26 @@ footer {
   }
 
   .in-addition {
+    padding-bottom: 96px;
+
     .wrapper {
-      min-height: 683px;
-      background: url(./images/donation-dog.png) no-repeat 101px bottom;
+      flex-direction: column-reverse;
     }
     
     .text-block {
-      margin: 52px 124px 0 0;
+      margin: 52px 0 30px 40px;
+    }
+
+    .in-addition-dog {
+      margin: 0;
     }
   }
 
   footer {
     .wrapper {
-      gap: 59px;
+      flex-wrap: wrap;
+      gap: 34px 59px;
       justify-content: center;
-      min-height: 639px;
-      background: url(./images/footer-puppy.png) no-repeat center bottom;
     }
 
     .contacts {
@@ -578,7 +600,13 @@ footer {
         margin-top: 8px;
       }
     }
+
+    .footer-puppy {
+      padding: 0;
+    }
   }
+
+
 
 }
 
