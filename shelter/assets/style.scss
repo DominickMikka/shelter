@@ -24,7 +24,7 @@ body {
 }
 
 .slider-overflow {
-  overflow: hidden;
+
 }
 
 header {
@@ -234,6 +234,7 @@ header {
       border-radius: 100px;
       background: url(./images/arrow-left.png) no-repeat center center;
       order: -1;
+      flex-shrink: 0;
     }
 
     .slide-right {
@@ -242,6 +243,7 @@ header {
       border: 2px solid #F1CDB3;
       border-radius: 100px;
       background: url(./images/arrow-right.png) no-repeat center center;
+      flex-shrink: 0;
     }
 
     .slide-left:hover, .slide-right:hover {
@@ -518,6 +520,78 @@ footer {
 
 }
 
+.close-modal {
+  background: rgba(41, 41, 41, 0.6);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  cursor: pointer;
+}
+
+  .modal {
+    display: flex;
+    gap: 30px;
+    position: fixed;
+    z-index: 99999;
+    width: 900px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: #FAFAFA;
+    border-radius: 9px;
+    color: #000000;
+    letter-spacing: 0.06em;
+
+    img {
+      width: 500px;
+      border-radius: 0 0 9px 9px;
+    }
+
+    h2 {
+      margin: 53px 0 12px;
+      font-size: 35px;
+      letter-spacing: 0.06em;
+    }
+
+    p {
+      margin-bottom: 40px;
+      font-size: 15px;
+      line-height: 112%;
+      max-width: 355px;
+    }
+
+    .modal-subtitle {
+      margin-bottom: 41px;
+      font-size: 20px;
+    }
+
+    .modal-age, .modal-inoculations, .modal-diseases, .modal-parasites {
+      font-size: 15px;
+      background: url(./images/dot.png) no-repeat 0 center;
+      text-indent: 16px;
+      margin-bottom: 11px;
+      letter-spacing: 0.06em;
+    }
+  
+    button {
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      border: 0;
+      background: url(./images/modal_close_button.png) no-repeat;
+      right: -42px;
+      top: -52px;
+      cursor: pointer;
+    }
+  }
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
 @media screen and (max-width:1279px) {
   header {
     padding: 30px 0 0 0;
@@ -577,6 +651,10 @@ footer {
 
     .pets {
       gap: 21px;
+
+      .slider {
+        gap: 21px;
+      }
 
       .pet {
         &:nth-child(1) {
@@ -644,6 +722,36 @@ footer {
 
     .footer-puppy {
       padding: 0;
+    }
+  }
+
+  .modal {
+    width: 630px;
+    height: 350px;
+    gap: 10px;
+
+    img {
+      width: 350px;
+    }
+
+    h2 {
+      margin: 13px 0 12px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 20px;
+      letter-spacing: 0.06em;
+      line-height: 106%;
+      max-width: 265px;
+    }
+
+    .modal-subtitle {
+      margin-bottom: 22px;
+    }
+
+    .modal-age, .modal-inoculations, .modal-diseases, .modal-parasites {
+      margin-bottom: 5px;
     }
   }
 
@@ -795,6 +903,7 @@ footer {
     .pets {
       justify-content: center;
       margin-bottom: 43px;
+      flex-wrap: wrap;
 
       .pet {
         margin: 0;
@@ -939,98 +1048,38 @@ footer {
 
   }
 
-}
-
-.close-modal {
-  background: rgba(41, 41, 41, 0.6);
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  position: fixed;
-}
-
   .modal {
-    display: flex;
-    gap: 30px;
-    position: fixed;
-    z-index: 99999;
-    width: 900px;
-    height: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-    background: #FAFAFA;
-    border-radius: 9px;
-    color: #000000;
-    letter-spacing: 0.06em;
+    width: 240px;
+    height: 341px;
+    gap: 0px;
 
     img {
-      width: 500px;
-      border-radius: 0 0 9px 9px;
+      display: none;
+    }
+
+    button {
+      right: -30px;
     }
 
     h2 {
-      margin: 53px 0 12px;
-      font-size: 35px;
-      letter-spacing: 0.06em;
-    }
-
-    p {
-      margin-bottom: 40px;
-      font-size: 15px;
-      line-height: 112%;
-      max-width: 355px;
+      text-align: center;
     }
 
     .modal-subtitle {
-      margin-bottom: 41px;
-      font-size: 20px;
+      text-align: center;
     }
 
-    .modal-age {
-      font-size: 15px;
-      background: url(./images/dot.png) no-repeat 0 center;
-      text-indent: 16px;
-      margin-bottom: 11px;
-      letter-spacing: 0.06em;
+    p {
+      text-align: justify;
+      width: auto;
+      padding: 0 10px;
+      margin-bottom: 23px;
     }
 
-    .modal-inoculations {
-      font-size: 15px;
-      background: url(./images/dot.png) no-repeat 0 center;
-      text-indent: 16px;
-      margin-bottom: 11px;
-      letter-spacing: 0.06em;
-    }
-
-    .modal-diseases {
-      font-size: 15px;
-      background: url(./images/dot.png) no-repeat 0 center;
-      text-indent: 16px;
-      margin-bottom: 11px;
-      letter-spacing: 0.06em;
-    }
-
-    .modal-parasites {
-      font-size: 15px;
-      background: url(./images/dot.png) no-repeat 0 center;
-      text-indent: 16px;
-      letter-spacing: 0.06em;
-    }
-  
-    button {
-      position: absolute;
-      width: 52px;
-      height: 52px;
-      border: 0;
-      background: url(./images/modal_close_button.png) no-repeat;
-      right: -42px;
-      top: -52px;
-      cursor: pointer;
+    .modal-age, .modal-inoculations, .modal-diseases, .modal-parasites {
+      margin-left: 10px;
+      margin-right: 10px;
     }
   }
 
-.no-scroll {
-  overflow-y: hidden;
 }
