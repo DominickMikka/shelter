@@ -8,12 +8,26 @@ body {
   background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
+.overflow {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(41, 41, 41, 0.6);
+  display: none;
+}
+
+.slider-overflow {
+  overflow: hidden;
+}
+
 header {
   max-width: 1280px;
   margin: 0 auto;
   padding: 60px 0 0 0;
 }
 header .mobile-menu {
+  transition: transform 0.5s;
   display: none;
   width: 30px;
   height: 22px;
@@ -24,6 +38,9 @@ header nav {
   display: flex;
   column-gap: 36px;
   margin: 19px 0 0 0;
+}
+header nav .hidden-logo {
+  display: none;
 }
 header nav a {
   height: 21px;
@@ -163,8 +180,23 @@ header .logo span {
   display: flex;
   align-items: center;
   gap: 71px;
-  flex-wrap: wrap;
   margin: 0 0 61px 0;
+  /*@keyframes move-left {
+    from {left: 0px}
+    to {left: -999px}
+  }
+
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+  }*/
+}
+.our-friends .pets .slider {
+  display: flex;
+  align-items: center;
+  gap: 71px;
+  position: relative;
 }
 .our-friends .pets .slide-left {
   width: 52px;
@@ -512,10 +544,58 @@ footer .footer-puppy img {
     gap: 40px;
   }
   header nav {
-    display: none;
+    transition: right 0.5s;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    position: fixed;
+    right: -320px;
+    top: 0;
+    height: 100vh;
+    width: 320px;
+    margin: 0;
+    padding: 29px 0 0 0;
+    background: #292929;
+    z-index: 999;
+  }
+  header nav .hidden-logo {
+    display: flex;
+    position: relative;
+    left: -42px;
+    top: 1px;
+    margin-bottom: 118px;
+  }
+  header nav a {
+    padding-bottom: 6px;
+    font-size: 32px;
+    height: auto;
+  }
+  header nav .logo-menu {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav .logo-menu a {
+    color: #F1CDB3;
+    text-decoration: none;
+    font-family: Georgia;
+    font-size: 32px;
+    letter-spacing: 2px;
+    padding-bottom: 9px;
+  }
+  header nav .logo-menu span {
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    padding: 0 0 0 5px;
+    letter-spacing: 0.1em;
   }
   header .mobile-menu {
     display: block;
+  }
+  header .mobile-menu.close-button {
+    position: relative;
+    top: 20px;
+    left: 40px;
   }
 
   .not-only .wrapper {
@@ -677,6 +757,90 @@ footer .footer-puppy img {
   footer .addresses .address-2 {
     padding: 8px 0 23px 40px;
   }
+}
+.close-modal {
+  background: rgba(41, 41, 41, 0.6);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+}
+
+.modal {
+  display: flex;
+  gap: 30px;
+  position: fixed;
+  z-index: 99999;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+  background: #FAFAFA;
+  border-radius: 9px;
+  color: #000000;
+  letter-spacing: 0.06em;
+}
+.modal img {
+  width: 500px;
+  border-radius: 0 0 9px 9px;
+}
+.modal h2 {
+  margin: 53px 0 12px;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+}
+.modal p {
+  margin-bottom: 40px;
+  font-size: 15px;
+  line-height: 112%;
+  max-width: 355px;
+}
+.modal .modal-subtitle {
+  margin-bottom: 41px;
+  font-size: 20px;
+}
+.modal .modal-age {
+  font-size: 15px;
+  background: url(./images/dot.png) no-repeat 0 center;
+  text-indent: 16px;
+  margin-bottom: 11px;
+  letter-spacing: 0.06em;
+}
+.modal .modal-inoculations {
+  font-size: 15px;
+  background: url(./images/dot.png) no-repeat 0 center;
+  text-indent: 16px;
+  margin-bottom: 11px;
+  letter-spacing: 0.06em;
+}
+.modal .modal-diseases {
+  font-size: 15px;
+  background: url(./images/dot.png) no-repeat 0 center;
+  text-indent: 16px;
+  margin-bottom: 11px;
+  letter-spacing: 0.06em;
+}
+.modal .modal-parasites {
+  font-size: 15px;
+  background: url(./images/dot.png) no-repeat 0 center;
+  text-indent: 16px;
+  letter-spacing: 0.06em;
+}
+.modal button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  background: url(./images/modal_close_button.png) no-repeat;
+  right: -42px;
+  top: -52px;
+  cursor: pointer;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
