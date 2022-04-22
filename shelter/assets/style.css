@@ -188,12 +188,6 @@ header .logo span {
     animation-fill-mode: forwards;
   }*/
 }
-.our-friends .pets .slider {
-  display: flex;
-  align-items: center;
-  gap: 71px;
-  position: relative;
-}
 .our-friends .pets .slide-left {
   width: 52px;
   height: 52px;
@@ -550,9 +544,6 @@ footer .footer-puppy img {
   .our-friends .pets {
     gap: 21px;
   }
-  .our-friends .pets .slider {
-    gap: 21px;
-  }
   .our-friends .pets .pet:nth-child(1) {
     right: 9px;
   }
@@ -760,7 +751,7 @@ footer .footer-puppy img {
     display: none;
   }
   .our-friends .pets .slide-left {
-    order: 0;
+    order: 1;
     margin-right: 57px;
   }
 

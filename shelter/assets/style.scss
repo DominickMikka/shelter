@@ -219,14 +219,6 @@ header {
       animation-fill-mode: forwards;
     }*/
 
-
-    .slider {
-      display: flex;
-      align-items: center;
-      gap: 71px;
-      position: relative;
-    }
-
     .slide-left {
       width: 52px;
       height: 52px;
@@ -652,10 +644,6 @@ footer {
     .pets {
       gap: 21px;
 
-      .slider {
-        gap: 21px;
-      }
-
       .pet {
         &:nth-child(1) {
           right: 9px;
@@ -922,7 +910,7 @@ footer {
       }
 
       .slide-left {
-        order: 0;
+        order: 1;
         margin-right: 57px;
       }
 

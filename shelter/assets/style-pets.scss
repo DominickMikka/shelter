@@ -14,6 +14,15 @@ body {
   background: url(./images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
+.overflow {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(41, 41, 41, 0.6);
+  display: none;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,6 +38,7 @@ header {
   top: 0;
 
   .mobile-menu {
+    transition: transform 0.5s;
     display: none;
     width: 30px;
     height: 22px;
@@ -40,6 +50,10 @@ header {
     display: flex;
     column-gap: 36px;
     margin: 19px 0 0 0;
+
+    .hidden-logo {
+      display: none;
+    }
 
     a {
       height: 21px;
@@ -278,6 +292,78 @@ footer {
   }
 }
 
+.close-modal {
+  background: rgba(41, 41, 41, 0.6);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: fixed;
+  cursor: pointer;
+}
+
+  .modal {
+    display: flex;
+    gap: 30px;
+    position: fixed;
+    z-index: 99999;
+    width: 900px;
+    min-height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    background: #FAFAFA;
+    border-radius: 9px;
+    color: #000000;
+    letter-spacing: 0.06em;
+
+    img {
+      width: 500px;
+      border-radius: 0 0 9px 9px;
+    }
+
+    h2 {
+      margin: 53px 0 12px;
+      font-size: 35px;
+      letter-spacing: 0.06em;
+    }
+
+    p {
+      margin-bottom: 40px;
+      font-size: 15px;
+      line-height: 112%;
+      max-width: 355px;
+    }
+
+    .modal-subtitle {
+      margin-bottom: 41px;
+      font-size: 20px;
+    }
+
+    .modal-age, .modal-inoculations, .modal-diseases, .modal-parasites {
+      font-size: 15px;
+      background: url(./images/dot.png) no-repeat 0 center;
+      text-indent: 16px;
+      margin-bottom: 11px;
+      letter-spacing: 0.06em;
+    }
+  
+    button {
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      border: 0;
+      background: url(./images/modal_close_button.png) no-repeat;
+      right: -42px;
+      top: -52px;
+      cursor: pointer;
+    }
+  }
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
 @media screen and (max-width:1279px) {
   .wrapper {
     max-width: 708px;
@@ -325,6 +411,36 @@ footer {
       padding: 0;
     }
   }
+
+  .modal {
+    width: 630px;
+    min-height: 350px;
+    gap: 10px;
+
+    img {
+      width: 350px;
+    }
+
+    h2 {
+      margin: 13px 0 12px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 20px;
+      letter-spacing: 0.06em;
+      line-height: 106%;
+      max-width: 265px;
+    }
+
+    .modal-subtitle {
+      margin-bottom: 22px;
+    }
+
+    .modal-age, .modal-inoculations, .modal-diseases, .modal-parasites {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 @media screen and (max-width:767px) {
@@ -340,11 +456,65 @@ footer {
     }
 
     nav {
-      display: none;
+      transition: right 0.5s;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      position: fixed;
+      right: -320px;
+      top: 0;
+      height: 100vh;
+      width: 320px;
+      margin: 0;
+      padding: 29px 0 0 0;
+      background: #FFFFFF;
+      z-index: 999;
+
+      .hidden-logo {
+        display: flex;
+        position: relative;
+        left: -42px;
+        top: 1px;
+        margin-bottom: 118px;
+      }
+
+      a {
+        padding-bottom: 6px;
+        font-size: 32px;
+        height: auto;
+      }
+
+      .logo-menu {
+        display: flex;
+        flex-direction: column;
+      
+        a {
+          color: #545454;
+          text-decoration: none;
+          font-family: Georgia;
+          font-size: 32px;
+          letter-spacing: 2px;
+          padding-bottom: 9px;
+        }
+      
+        span {
+          color: #292929;
+          font-family: Arial, sans-serif;
+          font-size: 13px;
+          padding: 0 0 0 5px;
+          letter-spacing: 0.1em;
+        }
+      }
     }
 
     .mobile-menu {
       display: block;
+
+      &.close-button {
+        position: relative;
+        top: 20px;
+        left: 40px;
+      }
     }
   }
 
@@ -414,4 +584,43 @@ footer {
     }
 
   }
+
+  .modal {
+    width: 240px;
+    min-height: 341px;
+    gap: 0px;
+
+    img {
+      display: none;
+    }
+
+    button {
+      right: -30px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .modal-subtitle {
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+      width: auto;
+      padding: 0 10px;
+      margin-bottom: 23px;
+    }
+
+    .modal-age, .modal-inoculations, .modal-diseases, .modal-parasites {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+}
+
+.static {
+  position: static;
 }
