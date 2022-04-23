@@ -203,6 +203,7 @@ header .logo span {
   border: 2px solid #F1CDB3;
   border-radius: 100px;
   background: url(./images/arrow-right.png) no-repeat center center;
+  order: 1;
   flex-shrink: 0;
 }
 .our-friends .pets .slide-left:hover, .our-friends .pets .slide-right:hover {
@@ -544,14 +545,15 @@ footer .footer-puppy img {
   .our-friends .pets {
     gap: 21px;
   }
-  .our-friends .pets .pet:nth-child(1) {
-    right: 9px;
-  }
   .our-friends .pets .pet:nth-child(2) {
     position: relative;
-    right: -11px;
+    right: 10px;
   }
   .our-friends .pets .pet:nth-child(3) {
+    position: relative;
+    left: 10px;
+  }
+  .our-friends .pets .pet:nth-child(4) {
     display: none;
   }
 
@@ -741,11 +743,8 @@ footer .footer-puppy img {
   .our-friends .pets .pet {
     margin: 0;
   }
-  .our-friends .pets .pet:nth-child(1) {
-    right: 0;
-  }
   .our-friends .pets .pet:nth-child(2) {
-    display: none;
+    right: 0;
   }
   .our-friends .pets .pet:nth-child(3) {
     display: none;

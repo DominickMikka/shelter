@@ -235,6 +235,7 @@ header {
       border: 2px solid #F1CDB3;
       border-radius: 100px;
       background: url(./images/arrow-right.png) no-repeat center center;
+      order: 1;
       flex-shrink: 0;
     }
 
@@ -645,16 +646,17 @@ footer {
       gap: 21px;
 
       .pet {
-        &:nth-child(1) {
-          right: 9px;
-        }
-
         &:nth-child(2) {
           position: relative;
-          right: -11px;
+          right: 10px;
         }
 
         &:nth-child(3) {
+          position: relative;
+          left: 10px;
+        }
+
+        &:nth-child(4) {
           display: none;
         }
       }
@@ -896,12 +898,8 @@ footer {
       .pet {
         margin: 0;
 
-        &:nth-child(1) {
-          right: 0;
-        }
-
         &:nth-child(2) {
-          display: none;
+          right: 0;
         }
 
         &:nth-child(3) {

@@ -17,6 +17,12 @@ const popupMenu = () => {
     overflowDiv.style.display = 'block';
     topMenu.style.right = '0px';
   });
+
+  topMenu.addEventListener('click', (e) => {
+    if (e.target.closest('a')) {
+      closePopup();
+    };
+  });
   
   mobileMenuButtonClose.addEventListener('click', () => {
     closePopup();

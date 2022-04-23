@@ -149,14 +149,11 @@ header .logo span {
   justify-content: center;
   gap: 20px;
 }
-.our-friends .pagination .first-page, .our-friends .pagination .previous-page {
-  width: 52px;
-  height: 52px;
+.our-friends .pagination .first-page:disabled, .our-friends .pagination .previous-page:disabled, .our-friends .pagination .next-page:disabled, .our-friends .pagination .last-page:disabled {
   border: 2px solid #CDCDCD;
-  border-radius: 100px;
-  font-size: 20px;
   color: #CDCDCD;
   background: transparent;
+  pointer-events: none;
 }
 .our-friends .pagination .current-page {
   width: 52px;
@@ -167,7 +164,7 @@ header .logo span {
   color: #292929;
   border: none;
 }
-.our-friends .pagination .next-page, .our-friends .pagination .last-page {
+.our-friends .pagination .first-page, .our-friends .pagination .previous-page, .our-friends .pagination .next-page, .our-friends .pagination .last-page {
   width: 52px;
   height: 52px;
   border: 2px solid #F1CDB3;
@@ -177,7 +174,7 @@ header .logo span {
   background: transparent;
   cursor: pointer;
 }
-.our-friends .pagination .next-page:hover, .our-friends .pagination .last-page:hover {
+.our-friends .pagination .first-page:hover, .our-friends .pagination .previous-page:hover, .our-friends .pagination .next-page:hover, .our-friends .pagination .last-page:hover {
   background-color: #FDDCC4;
   border-color: #FDDCC4;
 }

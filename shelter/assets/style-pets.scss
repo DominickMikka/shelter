@@ -172,15 +172,12 @@ header {
     display: flex;
     justify-content: center;
     gap: 20px;
-    
-    .first-page, .previous-page {
-      width: 52px;
-      height: 52px;
+
+    .first-page:disabled, .previous-page:disabled, .next-page:disabled, .last-page:disabled {
       border: 2px solid #CDCDCD;
-      border-radius: 100px;
-      font-size: 20px;
       color: #CDCDCD;
       background: transparent;
+      pointer-events: none;
     }
 
     .current-page {
@@ -193,7 +190,7 @@ header {
       border: none;
     }
 
-    .next-page, .last-page {
+    .first-page, .previous-page, .next-page, .last-page {
       width: 52px;
       height: 52px;
       border: 2px solid #F1CDB3;
