@@ -7,10 +7,26 @@ const loadPets = async () => {
   const nextPage = document.querySelector('.next-page');
   const lastPage = document.querySelector('.last-page');
 
+  const windowWidth = Math.max(
+    document.body.scrollWidth, document.documentElement.scrollWidth,
+    document.body.offsetWidth, document.documentElement.offsetWidth,
+    document.body.clientWidth, document.documentElement.clientWidth
+  );
+
+  console.log(windowWidth);
+
   let position = 0;
   let currentPageNumber = 1;
+  let visibleElements = 8;
 
   let arr = [];
+
+  if (windowWidth < 1280) {
+    visibleElements = 6;
+  }
+  if (windowWidth < 768) {
+    visibleElements = 3;
+  }
 
   const getPets = async () => {
     let query = await fetch('./assets/js/pets.json');
@@ -37,7 +53,7 @@ const loadPets = async () => {
     }
   }
   
-    for (let i = position; i < position + 8; i++) {
+    for (let i = position; i < position + visibleElements; i++) {
   
       let petDiv = document.createElement('div');
       petDiv.className = 'pet';
@@ -78,9 +94,9 @@ const loadPets = async () => {
 
   nextPage.addEventListener('click', () => {
     deletePets();
-    position += 8;
+    position += visibleElements;
     createPets(allPets, false, position);
-    if (position === 40) {
+    if (position === 48 - visibleElements) {
       nextPage.setAttribute('disabled', '');
       lastPage.setAttribute('disabled', '');
     } else {
@@ -92,7 +108,7 @@ const loadPets = async () => {
 
   previousPage.addEventListener('click', () => {
     deletePets();
-    position -= 8;
+    position -= visibleElements;
     createPets(allPets, false, position);
     if (position === 0) {
       previousPage.setAttribute('disabled', '');
@@ -118,13 +134,13 @@ const loadPets = async () => {
 
   lastPage.addEventListener('click', () => {
     deletePets();
-    position = 40;
+    position = 48 - visibleElements;
     createPets(allPets, false, position);
     previousPage.removeAttribute('disabled');
     firstPage.removeAttribute('disabled');
     nextPage.setAttribute('disabled', '');
     lastPage.setAttribute('disabled', '');
-    currentPageNumber = 6;
+    currentPageNumber = 48 / visibleElements;
     currentPage.innerHTML = currentPageNumber;
   })
 

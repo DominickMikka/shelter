@@ -378,10 +378,6 @@ footer {
     .pets {
       justify-content: center;
       margin-bottom: 40px;
-
-      .pet:nth-last-child(-n+2) {
-        display: none;
-      }
     }
   }
 
@@ -528,10 +524,6 @@ footer {
     .pets {
       justify-content: center;
       margin-bottom: 43px;
-
-      .pet:nth-last-child(-n+5) {
-        display: none;
-      }
     }
 
     .pagination {
