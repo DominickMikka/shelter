@@ -13,8 +13,6 @@ const loadPets = async () => {
     document.body.clientWidth, document.documentElement.clientWidth
   );
 
-  console.log(windowWidth);
-
   let position = 0;
   let currentPageNumber = 1;
   let visibleElements = 8;
